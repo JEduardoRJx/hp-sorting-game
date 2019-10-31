@@ -8,10 +8,29 @@ export class App extends Component {
     super();
   }
 
+  closeModal = () => {
+    const modal = document.querySelector('.modal');
+    const modalTitle = document.querySelector('.modal-title');
+    const modalImg = document.querySelector('.modal-img');
+    const modalGif = document.querySelector('.modal-gif');
+    modalTitle.style.display = 'none';
+    modalImg.style.display = 'none';
+    modalGif.style.display = 'block'
+    setTimeout(function(){ 
+      modal.style.display = 'none';
+    }, 3000);
+  }
+
   render() {
     return (
       <main>
         <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
+        <div className='modal'>
+          <h1 className='modal-title'>Harry Potter and the Sorting Game</h1>
+          <img className ='modal-img' src={require('../../images/marauders_map.png')} 
+          onClick={this.closeModal}/>
+          <img className ='modal-gif' src={require('../../images/issiautng.gif')} />
+        </div>
       </main>
     )
   }
