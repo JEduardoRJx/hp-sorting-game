@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
-import './App.scss'
+import './App.scss';
+import { connect } from 'react-redux';
 
 export class App extends Component {
   constructor() {
@@ -15,3 +16,13 @@ export class App extends Component {
     )
   }
 }
+
+export const mapStateToProps = ({}) => ({
+
+})
+
+export const mapDispatchToProps = dispatch => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
