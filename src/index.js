@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './containers/app/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
@@ -18,7 +18,7 @@ const router = (
 )
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     {router}
   </Provider>, 
   document.getElementById('root')
