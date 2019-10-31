@@ -20,6 +20,7 @@ $huff-light: #D1B738;
 * {
   margin: 0px;
   padding: 0px;
+  transition: ease all .3s;
 }
 
 main {
@@ -27,10 +28,43 @@ main {
   height: 100vh;
 }
 
-.game-title {
-  color: $hw-light;
+.game-title,
+.modal-title {
   font-family: 'harry_pregular';
-  font-size: 5em;
+  font-size: 6em;
 }
 
+.game-title {
+  color: $hw-light;
+}
+
+.modal-title {
+  color: $hw-dark;
+}
+
+.modal {
+  background-color: $hw-light;
+  color: $hw-dark;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  height: 300px;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+.modal-gif {
+  display: none;
+}
 
