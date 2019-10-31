@@ -11,7 +11,7 @@ export class App extends Component {
   render() {
     return (
       <main>
-        Harry Potter and the Sorting Game
+        <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
       </main>
     )
   }

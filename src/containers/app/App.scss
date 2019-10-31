@@ -1,22 +1,36 @@
-.App {
-  text-align: center;
+$hw-dark: #4c3638;
+$hw-light: #D3A481;
+$sl-dark: #276F45;
+$sl-light: #A8B0BF;
+$gryf-dark: #702737;
+$gryf-light: #DAA520;
+$rav-dark: #274F70;
+$rav-light: #C98C4E;
+$huff-dark: #141414;
+$huff-light: #D1B738;
+
+@font-face {
+  font-family: 'harry_pregular';
+  src: url('../fonts/harryp__-webfont.woff') format('woff'),
+       url('../fonts/harryp__-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+  background-color: $hw-dark;
+  height: 100vh;
 }
 
-.App-link {
-  color: #09d3ac;
+.game-title {
+  color: $hw-light;
+  font-family: 'harry_pregular';
+  font-size: 5em;
 }
+
+
