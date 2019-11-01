@@ -26,6 +26,7 @@ $huff-light: #D1B738;
 main {
   background-color: $hw-dark;
   height: 100vh;
+  overflow: scroll;
 }
 
 .game-title,
