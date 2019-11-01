@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-//import reducer here
+import { allCharacters } from './allCharacters';
+import { gameCharacters } from './gameCharacters';
+import { isLoading } from './isLoading'
 
 const rootReducer = combineReducers({
-  //reducer here
+  allCharacters,
+  isLoading,
+  gameCharacters
 });
 
 export default rootReducer;
