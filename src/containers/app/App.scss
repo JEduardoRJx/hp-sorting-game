@@ -31,8 +31,10 @@ main {
 
 .game-title {
   font-family: 'harry_pregular';
-  font-size: 5em;
+  font-size: 4.5em;
   height: 10vh;
   color: $hw-light;
   text-align: center;
+  border-bottom: 3px solid $hw-light;
+  
 }
