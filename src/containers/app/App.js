@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Route, NavLink, Redirect } from 'react-router-dom';
 import './App.scss';
 import { connect } from 'react-redux';
-import { fetchCharacters } from './apiCalls'
-import Modal from '../../components/modal/Modal'
-import MainScreen from '../../components/mainscreen/MainScreen'
+import { fetchCharacters } from './apiCalls';
+import Modal from '../../components/modal/Modal';
+import MainScreen from '../../components/mainscreen/MainScreen';
+import { setCharacters,  isLoading } from '../../actions';
 
 export class App extends Component {
   constructor() {
@@ -12,14 +13,11 @@ export class App extends Component {
   }
 
   async componentDidMount() {
+    const { setCharacters, loading } = this.props;
     try {
       const characters = await fetchCharacters();
-      //action that sets characters to state
-      console.log(characters)
-      //action that filters characters set to a house
-      const charactersInHouses = characters.filter(char => 'house' in char)
-      //set charactersInHouses to state
-      console.log(charactersInHouses)
+      setCharacters(characters)
+      loading(false)
     } catch({ message }) {
       console.log(message);
     }
@@ -40,6 +38,7 @@ export class App extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <main>
         <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
@@ -51,12 +50,14 @@ export class App extends Component {
   }
 }
 
-export const mapStateToProps = ({}) => ({
-
+export const mapStateToProps = ({ allCharacters, isLoading }) => ({
+  allCharacters,
+  isLoading
 })
 
 export const mapDispatchToProps = dispatch => ({
-
+  setCharacters: characters => dispatch( setCharacters(characters) ),
+  loading: bool => dispatch( isLoading(bool) )
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
