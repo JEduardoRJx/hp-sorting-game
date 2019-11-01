@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import { fetchCharacters } from './apiCalls';
 import Modal from '../../components/modal/Modal';
 import MainScreen from '../../components/mainscreen/MainScreen';
-import { setCharacters,  isLoading } from '../../actions';
+import { setCharacters, isLoading } from '../../actions';
+import Game from '../game/Game'
 
 export class App extends Component {
   constructor() {
@@ -38,13 +39,14 @@ export class App extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <main>
         <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
         <Redirect to='/' />
         <Modal closeModal={this.closeModal}/>
         <Route exact path='/' render={() => <MainScreen />} />
+        <Route path='/game' render={() => <Game />} />
+
       </main>
     )
   }
