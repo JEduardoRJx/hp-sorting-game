@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Redirect } from 'react-router-dom';
 import './App.scss';
 import { connect } from 'react-redux';
 import { fetchCharacters } from './apiCalls'
@@ -43,6 +43,7 @@ export class App extends Component {
     return (
       <main>
         <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
+        <Redirect to='/' />
         <Modal closeModal={this.closeModal}/>
         <Route exact path='/' render={() => <MainScreen />} />
       </main>
