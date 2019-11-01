@@ -4,6 +4,7 @@ import './App.scss';
 import { connect } from 'react-redux';
 import { fetchCharacters } from './apiCalls'
 import Modal from '../../components/modal/Modal'
+import MainScreen from '../../components/mainscreen/MainScreen'
 
 export class App extends Component {
   constructor() {
@@ -43,6 +44,7 @@ export class App extends Component {
       <main>
         <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
         <Modal closeModal={this.closeModal}/>
+        <Route exact path='/' render={() => <MainScreen />} />
       </main>
     )
   }
