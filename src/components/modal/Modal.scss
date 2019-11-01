@@ -1,0 +1,34 @@
+$hw-dark: #4c3638;
+$hw-light: #D3A481;
+
+.modal {
+  background-color: $hw-light;
+  color: $hw-dark;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title {
+  font-family: 'harry_pregular';
+  font-size: 6em;
+  color: $hw-dark;
+}
+
+.modal-img {
+  height: 300px;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+.modal-gif {
+  display: none;
+}
