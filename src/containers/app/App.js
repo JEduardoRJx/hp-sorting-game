@@ -3,26 +3,27 @@ import { Route, NavLink } from 'react-router-dom';
 import './App.scss';
 import { connect } from 'react-redux';
 import { fetchCharacters } from './apiCalls'
+import Modal from '../../components/modal/Modal'
 
 export class App extends Component {
   constructor() {
     super();
   }
 
-  async componentDidMount() {
-    try {
-      const characters = await fetchCharacters();
-      //action that sets characters to state
-      console.log(characters)
-      //action that filters characters set to a house
-      const charactersInHouses = characters.filter(char => 'house' in char)
-      //set charactersInHouses to state
-      console.log(charactersInHouses)
-    } catch({ message }) {
-      console.log(message);
-    }
+  // async componentDidMount() {
+  //   try {
+  //     const characters = await fetchCharacters();
+  //     //action that sets characters to state
+  //     console.log(characters)
+  //     //action that filters characters set to a house
+  //     const charactersInHouses = characters.filter(char => 'house' in char)
+  //     //set charactersInHouses to state
+  //     console.log(charactersInHouses)
+  //   } catch({ message }) {
+  //     console.log(message);
+  //   }
     
-  }
+  // }
 
   closeModal = () => {
     const modal = document.querySelector('.modal');
@@ -41,12 +42,7 @@ export class App extends Component {
     return (
       <main>
         <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
-        <div className='modal'>
-          <h1 className='modal-title'>Harry Potter and the Sorting Game</h1>
-          <img className ='modal-img' src={require('../../images/marauders_map.png')} 
-          onClick={this.closeModal}/>
-          <img className ='modal-gif' src={require('../../images/issiautng.gif')} />
-        </div>
+        <Modal closeModal={this.closeModal}/>
       </main>
     )
   }
