@@ -1,7 +1,17 @@
 export const gameCharacters = (state = [], action) => {
   switch(action.type) {
     case 'SET_GAME_CHAR':
-      return action.gameCharacter;
+      const charsInHouses = action.allCharacters.filter(char => 'house' in char)
+      let gameCharacters = [];
+      const selectCharacter = () => {
+        if (gameCharacters.length < 10) {
+          let randomCharacter = charsInHouses[Math.floor(Math.random()*charsInHouses.length)]
+          gameCharacters.push(randomCharacter)
+          selectCharacter();
+        }
+      }
+      selectCharacter();
+      return gameCharacters
     default:
       return state;
   }
