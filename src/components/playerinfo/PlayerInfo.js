@@ -4,7 +4,8 @@ import './PlayerInfo.scss'
 const PlayerInfo = () => {
   return(
     <aside>
-      PLAYER INFO
+      <img className='crest' 
+        src={require('../../images/hogwarts_crest.png')}/>
     </aside>
   )
 }

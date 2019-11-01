@@ -11,20 +11,20 @@ export class App extends Component {
     super();
   }
 
-  // async componentDidMount() {
-  //   try {
-  //     const characters = await fetchCharacters();
-  //     //action that sets characters to state
-  //     console.log(characters)
-  //     //action that filters characters set to a house
-  //     const charactersInHouses = characters.filter(char => 'house' in char)
-  //     //set charactersInHouses to state
-  //     console.log(charactersInHouses)
-  //   } catch({ message }) {
-  //     console.log(message);
-  //   }
+  async componentDidMount() {
+    try {
+      const characters = await fetchCharacters();
+      //action that sets characters to state
+      console.log(characters)
+      //action that filters characters set to a house
+      const charactersInHouses = characters.filter(char => 'house' in char)
+      //set charactersInHouses to state
+      console.log(charactersInHouses)
+    } catch({ message }) {
+      console.log(message);
+    }
     
-  // }
+  }
 
   closeModal = () => {
     const modal = document.querySelector('.modal');
