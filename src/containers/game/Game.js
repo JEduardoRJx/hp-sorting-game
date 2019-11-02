@@ -8,18 +8,18 @@ class Game extends Component {
     super();
     this.state ={
       index: 0,
-      correct: 0
+      correct: 0, 
+      message: ''
     }
   }
 
   checkAnswer = (event) => {
+    console.log(event)
     const { gameCharacters } = this.props
     if (event.target.name === gameCharacters[this.state.index].house) {
-      console.log('correct')
-    this.setState({index: this.state.correct + 1})
-
+      this.setState({index: this.state.correct + 1, message: 'Correct!'})
     } else {
-      console.log('incorrect')
+      this.setState({message: 'Incorrect'})
     }
     this.setState({index: this.state.index + 1})
   }
@@ -27,10 +27,10 @@ class Game extends Component {
   render() {
     const { gameCharacters, isLoading } = this.props;
     console.log(gameCharacters)
-    console.log(this.state)
-    
+    const message = <p>{this.state.message}</p>
     return (
       <section className='game-section'>
+        {message}
         <GameChar character={gameCharacters[this.state.index]} 
           isLoading={isLoading} 
           checkAnswer={this.checkAnswer}/>
