@@ -18,22 +18,21 @@ class Game extends Component {
     console.log(event)
     const { gameCharacters } = this.props
     if (event.target.name === gameCharacters[this.state.index].house) {
-      this.setState({index: this.state.correct + 1, message: 'Correct!', toggleModal: 'show'})
+      this.setState({index: this.state.index + 1, correct: this.state.correct + 1, message: 'Correct!', toggleModal: 'show'})
       setTimeout(() => {
         this.setState({toggleModal: 'hide'})
-      }, 2000);
+      }, 1500);
     } else {
       this.setState({message: 'Incorrect', toggleModal: 'show'});
       setTimeout(() => {
         this.setState({toggleModal: 'hide'})
-      }, 2000);
+      }, 1500);
     }
     this.setState({index: this.state.index + 1})
   }
 
   render() {
     const { gameCharacters, isLoading } = this.props;
-    console.log(gameCharacters)
     const message = <div className={`game-modal ${this.state.toggleModal}`}>
         <h1 className='game-modal-h1'>{this.state.message}</h1>
       </div>
@@ -41,9 +40,10 @@ class Game extends Component {
     return (
       <section className='game-section'>
         {message} 
-        <GameChar character={gameCharacters[this.state.index]} 
+        {this.state.index <= 9 && <GameChar character={gameCharacters[this.state.index]}
           isLoading={isLoading} 
-          checkAnswer={this.checkAnswer}/>
+          checkAnswer={this.checkAnswer}/>}
+        {this.state.index === 10 && <p>results</p>}
       </section>
     )
   }
