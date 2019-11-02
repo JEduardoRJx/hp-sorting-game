@@ -6,10 +6,10 @@ export const gameCharacters = (state = [], action) => {
       const selectCharacter = () => {
         while (gameCharacters.length < 10) {
           let randomCharacter = charsInHouses[Math.floor(Math.random()*charsInHouses.length)]
-          if(charsInHouses.some(char => char.name !== randomCharacter.name)) {
-            gameCharacters.push(randomCharacter)
+          if(gameCharacters.find(char => char.name === randomCharacter.name)) {
+            selectCharacter();
           }
-          selectCharacter();
+          gameCharacters.push(randomCharacter)
         }
       }
       selectCharacter();
