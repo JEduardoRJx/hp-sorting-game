@@ -2,3 +2,24 @@
   height: 90vh;
   background-color: blue;
 }
+
+
+
+.game-modal {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  z-index: 1;
+  position: absolute;
+}
