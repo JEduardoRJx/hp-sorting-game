@@ -2,8 +2,6 @@ import React from 'react';
 import './GameChar.scss'
 
 const GameChar = ({character, isLoading, checkAnswer}) => {
-  console.log(isLoading)
-  console.log(character)
   if(isLoading) {
     return null;
   }
