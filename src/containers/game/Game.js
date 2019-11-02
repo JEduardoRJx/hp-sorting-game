@@ -9,7 +9,8 @@ class Game extends Component {
     this.state ={
       index: 0,
       correct: 0, 
-      message: ''
+      message: '',
+      toggleModal: 'hide'
     }
   }
 
@@ -17,9 +18,15 @@ class Game extends Component {
     console.log(event)
     const { gameCharacters } = this.props
     if (event.target.name === gameCharacters[this.state.index].house) {
-      this.setState({index: this.state.correct + 1, message: 'Correct!'})
+      this.setState({index: this.state.correct + 1, message: 'Correct!', toggleModal: 'show'})
+      setTimeout(() => {
+        this.setState({toggleModal: 'hide'})
+      }, 2000);
     } else {
-      this.setState({message: 'Incorrect'})
+      this.setState({message: 'Incorrect', toggleModal: 'show'});
+      setTimeout(() => {
+        this.setState({toggleModal: 'hide'})
+      }, 2000);
     }
     this.setState({index: this.state.index + 1})
   }
@@ -27,10 +34,13 @@ class Game extends Component {
   render() {
     const { gameCharacters, isLoading } = this.props;
     console.log(gameCharacters)
-    const message = <p>{this.state.message}</p>
+    const message = <div className={`game-modal ${this.state.toggleModal}`}>
+        <h1 className='game-modal-h1'>{this.state.message}</h1>
+      </div>
+
     return (
       <section className='game-section'>
-        {message}
+        {message} 
         <GameChar character={gameCharacters[this.state.index]} 
           isLoading={isLoading} 
           checkAnswer={this.checkAnswer}/>
