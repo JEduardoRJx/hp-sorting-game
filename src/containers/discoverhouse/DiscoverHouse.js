@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './DiscoverHouse.scss';
-import PlayerInfo from '../../components/playerinfo/PlayerInfo'
+import PlayerInfo from '../../components/playerinfo/PlayerInfo';
+import { connect } from 'react-redux';
 
 export class DiscoverHouse extends Component {
   constructor() {
@@ -18,14 +19,15 @@ export class DiscoverHouse extends Component {
   }
 
   handleWizardkindAndWand = (event) => {
-    console.log(event.target.name)
-    console.log(event.target)
-
     this.setState({[event.target.name]: event.target.value})
   }
 
+  handleUser = () => {
+    
+  }
+
   render() {
-    console.log(this.state)
+    console.log(this.props)
     return (
       <section className='discover-house-section'>
         <PlayerInfo />
@@ -78,4 +80,12 @@ export class DiscoverHouse extends Component {
   }
 }
 
-export default DiscoverHouse;
+export const mapStateToProps = ({ house }) => ({
+  house
+})
+
+export const mapDispatchToProps = dispatch => ({
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(DiscoverHouse);
