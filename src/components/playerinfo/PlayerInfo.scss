@@ -17,8 +17,21 @@ aside {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  &:gryffindor {
-  background-color: $gryf-light;
+  &.gryffindor {
+    background-color: $gryf-light;
+    color: $gryf-dark;
+  }
+  &.slytherin {
+    background-color: $sl-light;
+    color: $sl-dark;
+  }
+  &.hufflepuff {
+    background-color: $huff-light;
+    color: $huff-dark;
+  }
+  &.ravenclaw {
+    background-color: $rav-light;
+    color: $rav-dark;
   }
 }
 
