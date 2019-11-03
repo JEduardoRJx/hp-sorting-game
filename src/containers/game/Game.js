@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 import GameChar from '../../components/gamechar/GameChar';
 import PlayerInfo from '../../components/playerinfo/PlayerInfo';
 import { quoteIndex, quotes } from './quotes';
-import { fetchCharacters } from '../../apiCalls';
+// import { fetchCharacters } from '../../apiCalls';
 import { setCharacters, isLoading, setGameCharacters } from '../../actions';
 
 class Game extends Component {
