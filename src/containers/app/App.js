@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, Redirect } from 'react-router-dom';
 import './App.scss';
 import { connect } from 'react-redux';
-import { fetchCharacters } from './apiCalls';
+import { fetchCharacters } from '../../apiCalls';
 import Modal from '../../components/modal/Modal';
 import MainScreen from '../../components/mainscreen/MainScreen';
 import { setCharacters, isLoading } from '../../actions';
