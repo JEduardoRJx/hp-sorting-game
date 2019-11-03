@@ -2,7 +2,6 @@ import React from 'react';
 import './GameChar.scss'
 
 const GameChar = ({character, isLoading, checkAnswer, message, toggleModal}) => {
-  console.log(isLoading)
   if(isLoading) {
     return null;
   }
@@ -18,18 +17,22 @@ const GameChar = ({character, isLoading, checkAnswer, message, toggleModal}) => 
         <img className='game-crest' 
           name='Gryffindor' 
           src={require('../../images/gryffindor.png')} 
+          alt='gryffindor crest' 
           onClick={event => checkAnswer(event)}/>
         <img className='game-crest' 
           name='Slytherin' 
           src={require('../../images/slytherin.png')} 
+          alt='slytherin crest' 
           onClick={event => checkAnswer(event)}/>
         <img className='game-crest' 
           name='Hufflepuff' 
           src={require('../../images/hufflepuff.png')} 
+          alt='hufflepuff crest' 
           onClick={event => checkAnswer(event)}/>
         <img className='game-crest' 
           name='Ravenclaw' 
           src={require('../../images/ravenclaw.png')} 
+          alt='ravenclaw crest' 
           onClick={event => checkAnswer(event)}/>
       </article>
   )
