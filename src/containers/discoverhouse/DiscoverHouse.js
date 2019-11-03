@@ -16,11 +16,12 @@ export class DiscoverHouse extends Component {
         <PlayerInfo />
         <form className='house-form'>
           <input className='name-input' type='text' placeholder='Enter Name' />
-          <h2>Witch or Wizard</h2>
+          <h2 className='house-label'>Witch or Wizard</h2>
           <div className='witchwizard-btn-wrapper'>
-            <button className='witch-btn' type='button'>Witch</button>
-            <button className='wizard-btn' type='button'>Wizard</button>
+            <button className='witchwizard-btn' type='button'>Witch</button>
+            <button className='witchwizard-btn' type='button'>Wizard</button>
           </div>
+          <h2 className='house-label'>Select your Wand</h2>
           <div className='wand-btn-wrapper'>
             <button className='WAND-BTN' type='button'>WAND-1</button>
             <button className='WAND-BTN' type='button'>WAND-1</button>
