@@ -27,6 +27,18 @@ main {
   background-color: $hw-dark;
   height: 100vh;
   overflow: scroll;
+  &.gryffindor {
+    background-color: $gryf-dark;
+  }
+  &.slytherin {
+    background-color: $sl-dark;
+  }
+  &.hufflepuff {
+    background-color: $huff-dark;
+  }
+  &.ravenclaw {
+    background-color: $rav-dark;
+  }
 }
 
 .game-title {
@@ -35,7 +47,6 @@ main {
   height: 10vh;
   color: $hw-light;
   text-align: center;
-  border-bottom: 3px solid $hw-light;
   &.gryffindor {
     background-color: $gryf-dark;
     color: $gryf-light;
