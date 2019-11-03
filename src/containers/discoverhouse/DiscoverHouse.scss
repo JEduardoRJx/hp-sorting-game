@@ -4,3 +4,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 }
+
+.house-form {
+  grid-column: 2/4;
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  flex-direction: column;
+  background-color: blue;
+  justify-content: space-around;
+  align-items: center;
+}
