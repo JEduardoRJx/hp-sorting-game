@@ -21,10 +21,11 @@ class Navigations extends Component {
   }
 
   render() {
-    const { setGameCharacters, allCharacters} = this.props
+    const { setGameCharacters, allCharacters, user} = this.props
+    const house = user === undefined ? '' : user.house
     return (
       <div className='navigation'>
-        <div className='icon-wrapper sorting-hat'>
+        <div className={`icon-wrapper sorting-hat ${house}`}>
           <NavLink to='/discoveryourhouse' 
             onClick={this.selectHouse}>
             <img className='main-screen-img' 
@@ -33,7 +34,7 @@ class Navigations extends Component {
           </NavLink>
           <label>Discover Your House</label>
         </div>
-        <div className='icon-wrapper golden-snitch'>
+        <div className={`icon-wrapper golden-snitch ${house}`}>
           <NavLink to='/game' onClick={() => setGameCharacters(allCharacters)}>
             <img className='main-screen-img' 
               src={require('../../images/snitch.svg')} 
@@ -41,7 +42,7 @@ class Navigations extends Component {
           </NavLink>
           <label>Play Game</label>
         </div>
-        <div className='icon-wrapper instructions'>
+        <div className={`icon-wrapper instructions ${house}`}>
           <NavLink to='/instructions'>
             <img className='main-screen-img' 
               src={require('../../images/instructions.svg')} 
@@ -49,7 +50,7 @@ class Navigations extends Component {
           </NavLink>
           <label>Instructions</label>
         </div>
-        <div className='icon-wrapper characters'>
+        <div className={`icon-wrapper characters ${house}`}>
           <NavLink to='/characters'>
             <img className='main-screen-img' 
               src={require('../../images/characters.svg')} 
@@ -57,7 +58,7 @@ class Navigations extends Component {
           </NavLink>
           <label>View All Characters</label>
         </div>
-        <div className='icon-wrapper wand'>
+        <div className={`icon-wrapper wand ${house}`}>
           <NavLink to='/spells'>
             <img className='main-screen-img' 
               src={require('../../images/wand.svg')} 
@@ -70,8 +71,9 @@ class Navigations extends Component {
   }
 }
 
-const mapStateToProps = ({ allCharacters, house }) => ({
-  allCharacters
+const mapStateToProps = ({ allCharacters, user }) => ({
+  allCharacters,
+  user
 })
 
 const mapDispatchToProps = dispatch => ({
