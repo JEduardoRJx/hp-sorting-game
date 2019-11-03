@@ -30,6 +30,12 @@ $huff-light: #D1B738;
   font-size: 3em;
   grid-column: 1/3;
   color: $hw-light;
+    // background-color: $hw-light;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-modal {

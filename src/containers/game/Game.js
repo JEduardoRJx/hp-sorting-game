@@ -27,7 +27,7 @@ class Game extends Component {
       this.setState({
         index: this.state.index + 1, 
         correct: this.state.correct + 1, 
-        message: 'Correct!', 
+        message: 'Wicked!', 
         toggleModal: 'show'
       })
       setTimeout(() => {
@@ -35,7 +35,7 @@ class Game extends Component {
       }, 1000);
     } else {
       this.setState({
-        message: 'Incorrect', 
+        message: 'Try Again!', 
         toggleModal: 'show'});
       setTimeout(() => {
         this.setState({toggleModal: 'hide'})
