@@ -1,0 +1,10 @@
+.game-section {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-results {
+  background-color: blue;
+  grid-column: 2/4;
+}

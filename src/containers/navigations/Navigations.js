@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigations.scss';
+import { connect } from 'react-redux'
+import { setGameCharacters } from '../../actions'
 
-const Navigations = () => {
+const Navigations = ({ setGameCharacters, allCharacters }) => {
   return (
     <div className='navigation'>
       <div className='icon-wrapper sorting-hat'>
@@ -14,7 +16,7 @@ const Navigations = () => {
         <label>Discover Your House</label>
       </div>
       <div className='icon-wrapper golden-snitch'>
-        <NavLink to='/game'>
+        <NavLink to='/game' onClick={() => setGameCharacters(allCharacters)}>
           <img className='main-screen-img' 
             src={require('../../images/snitch.svg')} 
             alt='golden snitch' />
@@ -49,4 +51,12 @@ const Navigations = () => {
   )
 }
 
-export default Navigations
+const mapStateToProps = ({ allCharacters }) => ({
+  allCharacters
+})
+
+const mapDispatchToProps = dispatch => ({
+  setGameCharacters: characters => dispatch( setGameCharacters(characters) )
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigations)

@@ -3,9 +3,9 @@ export const setCharacters = characters => ({
   characters
 })
 
-export const setGameCharacters = characters => ({
+export const setGameCharacters = allCharacters => ({
   type: 'SET_GAME_CHAR',
-  characters
+  allCharacters
 })
 
 export const isLoading = bool => ({
