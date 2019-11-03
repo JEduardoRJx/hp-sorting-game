@@ -33,11 +33,16 @@ export class DiscoverHouse extends Component {
       house
     }
     setUser(user)
-    clearInputs()
+    this.clearInputs();
   }
 
   clearInputs = () => {
-    
+    this.setState = ({
+        name: '',
+        wizardkind: '',
+        wand: '',
+        house: ''
+    });
   }
 
   render() {
