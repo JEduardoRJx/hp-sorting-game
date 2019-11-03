@@ -23,10 +23,10 @@ export class DiscoverHouse extends Component {
           </div>
           <h2 className='house-label'>Select your Wand</h2>
           <div className='wand-btn-wrapper'>
-            <button className='WAND-BTN' type='button'>WAND-1</button>
-            <button className='WAND-BTN' type='button'>WAND-1</button>
-            <button className='WAND-BTN' type='button'>WAND-1</button>
-            <button className='WAND-BTN' type='button'>WAND-1</button>
+            <button className='WAND-BTN' type='button'>Elder, 15", thestral tail hair</button>
+            <button className='WAND-BTN' type='button'>Holly, 11", phoenix feather</button>
+            <button className='WAND-BTN' type='button'>Vine wood, 10 3/4", dragon heartstring</button>
+            <button className='WAND-BTN' type='button'>Fir, 9 1/2", dragon heartstring</button>
           </div>
           <button className='your-house-btn' type='button'>Your House Is...</button>
         </form>
