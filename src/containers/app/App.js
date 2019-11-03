@@ -40,23 +40,25 @@ export class App extends Component {
   }
 
   render() {
+    const { user } = this.props
+    const house = user === undefined ? '' : user.house
     return (
       <main>
-        <h1 className='game-title'>Harry Potter and the Sorting Game</h1>
+        <h1 className={`game-title ${house}`}>Harry Potter and the Sorting Game</h1>
         <Redirect to='/' />
         <Modal closeModal={this.closeModal}/>
         <Route exact path='/' render={() => <MainScreen />} />
         <Route path='/game' render={() => <Game />} />
         <Route path='/discoveryourhouse' render={() => <DiscoverHouse />} />
-
       </main>
     )
   }
 }
 
-export const mapStateToProps = ({ allCharacters, isLoading }) => ({
+export const mapStateToProps = ({ allCharacters, isLoading, user }) => ({
   allCharacters,
-  isLoading
+  isLoading,
+  user
 })
 
 export const mapDispatchToProps = dispatch => ({
