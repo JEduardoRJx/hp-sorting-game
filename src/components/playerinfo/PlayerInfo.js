@@ -5,7 +5,8 @@ const PlayerInfo = () => {
   return(
     <aside>
       <img className='crest' 
-        src={require('../../images/hogwarts_crest.png')}/>
+        src={require('../../images/hogwarts_crest.png')}
+        alt='hogwarts crest'/>
     </aside>
   )
 }
