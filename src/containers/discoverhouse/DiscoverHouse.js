@@ -45,6 +45,18 @@ export class DiscoverHouse extends Component {
   }
 
   render() {
+    const { user } = this.props;
+    const house = user === undefined ? '' : user.house;
+    let yourHouseIsBtn;
+    
+    if(this.state.name !== '' && this.wizardKind !=='' && this.state.wand !== '') {
+      yourHouseIsBtn = (
+        <button className={`your-house-btn ${house}`} 
+            type='button' 
+            onClick={this.handleUser}>Your House Is...</button>
+      )
+    }
+
     return (
       <section className='discover-house-section'>
         <PlayerInfo />
@@ -53,45 +65,43 @@ export class DiscoverHouse extends Component {
             type='text' 
             placeholder='Enter Name' 
             onChange={this.handleName}/>
-          <h2 className='house-label'>Witch or Wizard</h2>
+          <h2 className={`house-label ${house}`}>Witch or Wizard</h2>
           <div className='witchwizard-btn-wrapper'>
-            <button className='witchwizard-btn' 
+            <button className={`witchwizard-btn ${house}`} 
               type='button' 
               name='wizardkind' 
               value='Witch'
               onClick={this.handleWizardkindAndWand}>Witch</button>
-            <button className='witchwizard-btn' 
+            <button className={`witchwizard-btn ${house}`} 
               type='button' 
               name='wizardkind' 
               value='Wizard' 
               onClick={this.handleWizardkindAndWand}>Wizard</button>
           </div>
-          <h2 className='house-label'>Select your Wand</h2>
+          <h2 className={`house-label ${house}`}>Select your Wand</h2>
           <div className='wand-btn-wrapper'>
-            <button className='WAND-BTN' 
+            <button className={`wand-btn ${house}`} 
               type='button' 
               name='wand' 
               value='Elder, 15", thestral tail hair' 
               onClick={this.handleWizardkindAndWand}>Elder, 15", thestral tail hair</button>
-            <button className='WAND-BTN' 
+            <button className={`wand-btn ${house}`} 
               type='button' 
               name='wand' 
               value='Holly, 11", phoenix feather'
               onClick={this.handleWizardkindAndWand}>Holly, 11", phoenix feather</button>
-            <button className='WAND-BTN' 
+            <button className={`wand-btn ${house}`} 
               type='button' 
               name='wand' 
               value='Vine wood, 10 3/4", dragon heartstring'
               onClick={this.handleWizardkindAndWand}>Vine wood, 10 3/4", dragon heartstring</button>
-            <button className='WAND-BTN' 
+            <button className={`wand-btn ${house}`} 
               type='button' 
               name='wand' 
               value='Fir, 9 1/2", dragon heartstring'
               onClick={this.handleWizardkindAndWand}>Fir, 9 1/2", dragon heartstring</button>
           </div>
-          <button className='your-house-btn' 
-            type='button' 
-            onClick={this.handleUser}>Your House Is...</button>
+          {yourHouseIsBtn}
         </form>
       </section>
     )
