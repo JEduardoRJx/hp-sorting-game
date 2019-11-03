@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigations.scss';
-import { connect } from 'react-redux'
-import { setGameCharacters, setHouse } from '../../actions'
+import { connect } from 'react-redux';
+import { setGameCharacters, setHouse, isLoading } from '../../actions';
+import { fetchSortingHat } from '../../apiCalls';
 
 class Navigations extends Component {
 
 
+  selectHouse = async () => {
+    const { setHouse, loading } = this.props
+    try {
+      loading(true);
+      const house = await fetchSortingHat()
+      setHouse(house)
+      loading(false)
+    } catch ({ message }) {
+      console.log(message)
+    }
+  }
+
   render() {
-    const { setGameCharacters, allCharacters } = this.props
+    const { setGameCharacters, allCharacters} = this.props
     return (
       <div className='navigation'>
         <div className='icon-wrapper sorting-hat'>
-          <NavLink to='/discoveryourhouse'>
+          <NavLink to='/discoveryourhouse' 
+            onClick={this.selectHouse}>
             <img className='main-screen-img' 
               src={require('../../images/sortingHat.svg')} 
               alt='sorting hat' />
@@ -56,12 +70,14 @@ class Navigations extends Component {
   }
 }
 
-const mapStateToProps = ({ allCharacters }) => ({
+const mapStateToProps = ({ allCharacters, house }) => ({
   allCharacters
 })
 
 const mapDispatchToProps = dispatch => ({
-  setGameCharacters: characters => dispatch( setGameCharacters(characters) )
+  setGameCharacters: characters => dispatch( setGameCharacters(characters) ),
+  loading: bool => dispatch( isLoading(bool) ),
+  setHouse: house => dispatch( setHouse(house) )
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navigations)
