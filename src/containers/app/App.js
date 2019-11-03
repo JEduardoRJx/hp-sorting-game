@@ -43,7 +43,7 @@ export class App extends Component {
     const { user } = this.props
     const house = user === undefined ? '' : user.house
     return (
-      <main>
+      <main className={`${house}`}>
         <h1 className={`game-title ${house}`}>Harry Potter and the Sorting Game</h1>
         <Redirect to='/' />
         <Modal closeModal={this.closeModal}/>
