@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './DiscoverHouse.scss';
 import PlayerInfo from '../../components/playerinfo/PlayerInfo';
 import { connect } from 'react-redux';
+import { setUser } from '../../actions'
 
 export class DiscoverHouse extends Component {
   constructor() {
@@ -23,6 +24,19 @@ export class DiscoverHouse extends Component {
   }
 
   handleUser = () => {
+    const { house } = this.props
+    console.log(house)
+    const user = {
+      name: this.state.name,
+      wizardkind: this.state.wizardkind,
+      wand: this.state.wand,
+      house
+    }
+    setUser(user)
+    clearInputs()
+  }
+
+  clearInputs = () => {
     
   }
 
@@ -73,19 +87,21 @@ export class DiscoverHouse extends Component {
               onClick={this.handleWizardkindAndWand}>Fir, 9 1/2", dragon heartstring</button>
           </div>
           <button className='your-house-btn' 
-            type='button'>Your House Is...</button>
+            type='button' 
+            onClick={this.handleUser}>Your House Is...</button>
         </form>
       </section>
     )
   }
 }
 
-export const mapStateToProps = ({ house }) => ({
-  house
+export const mapStateToProps = ({ house, user }) => ({
+  house,
+  user
 })
 
 export const mapDispatchToProps = dispatch => ({
-
+  setUser: user => dispatch( setUser(user) )
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(DiscoverHouse);
