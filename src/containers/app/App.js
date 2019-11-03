@@ -6,7 +6,8 @@ import { fetchCharacters } from '../../apiCalls';
 import Modal from '../../components/modal/Modal';
 import MainScreen from '../../components/mainscreen/MainScreen';
 import { setCharacters, isLoading } from '../../actions';
-import Game from '../game/Game'
+import Game from '../game/Game';
+import DiscoverHouse from '../discoverhouse/DiscoverHouse'
 
 export class App extends Component {
   constructor() {
@@ -46,6 +47,7 @@ export class App extends Component {
         <Modal closeModal={this.closeModal}/>
         <Route exact path='/' render={() => <MainScreen />} />
         <Route path='/game' render={() => <Game />} />
+        <Route path='/discoveryourhouse' render={() => <DiscoverHouse />} />
 
       </main>
     )
