@@ -13,6 +13,7 @@ aside {
   width: 100%;
   background-color: $hw-light;
   color: $hw-dark;
+  border-right: 10px solid $hw-dark;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,18 +21,24 @@ aside {
   &.gryffindor {
     background-color: $gryf-light;
     color: $gryf-dark;
+  border-right: 10px solid $gryf-dark;
+
   }
   &.slytherin {
     background-color: $sl-light;
     color: $sl-dark;
+  border-right: 10px solid $sl-dark;
+
   }
   &.hufflepuff {
     background-color: $huff-light;
     color: $huff-dark;
+    border-right: 10px solid $huff-dark;
   }
   &.ravenclaw {
     background-color: $rav-light;
     color: $rav-dark;
+    border-right: 10px solid $rav-dark;
   }
 }
 
