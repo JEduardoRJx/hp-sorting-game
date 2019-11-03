@@ -7,7 +7,6 @@ const PlayerInfo = ({ user }) => {
   const userName = user.name|| 'Discover your';
   const userWizardkind = user.wizardkind || 'House to ';
   const userWand = user.wand || 'See Info. Here'
-  console.log(houseCrest);
   return(
     <aside className={`${houseCrest}`}>
       <img className='crest' 
