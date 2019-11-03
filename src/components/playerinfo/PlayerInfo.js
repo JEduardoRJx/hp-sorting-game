@@ -7,15 +7,15 @@ const PlayerInfo = ({ user }) => {
   const userName = user.name|| 'Discover your';
   const userWizardkind = user.wizardkind || 'House to ';
   const userWand = user.wand || 'See Info. Here'
-
+  console.log(houseCrest);
   return(
-    <aside>
+    <aside className={`${houseCrest}`}>
       <img className='crest' 
         src={require(`../../images/${houseCrest}.png`)}
         alt='hogwarts crest'/>
-      <h1 className={`user-name ${houseCrest}`}>{userName}</h1>
-      <h2 className={`user-wizardkind ${houseCrest}`}>{userWizardkind}</h2>
-      <h2 className={`user-wand ${houseCrest}`}>{userWand}</h2>
+      <h1 className={`user-name`}>{userName}</h1>
+      <h2 className={`user-wizardkind`}>{userWizardkind}</h2>
+      <h2 className={`user-wand`}>{userWand}</h2>
     </aside>
   )
 }
