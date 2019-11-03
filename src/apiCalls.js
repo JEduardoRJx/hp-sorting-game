@@ -16,7 +16,7 @@ export const fetchCharacters = async () => {
 
 export const fetchSortingHat = async () => {
   const url = `${baseUrl}/sortingHat`;
-  const repsonse = await fetch(url);
+  const response = await fetch(url);
   if(!response.ok) {
     throw Error('The sorting hat must me asleep, can\'t fetch House');
   }
