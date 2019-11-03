@@ -67,21 +67,22 @@ class Game extends Component {
   // }
 
   render() {
-    const { gameCharacters, isLoading } = this.props;
+    const { gameCharacters, isLoading, user } = this.props;
     console.log(gameCharacters)
     const percent = (this.state.correct / 10) * 100
     const quoteResult = quotes[quoteIndex[this.state.correct]]
     const header = quoteResult.header
     const quote = quoteResult.quote
+    const house = user === undefined ? '' : user.house
 
-    const results = <div className='game-results'>
+    const results = <div className={`game-results ${house}`}>
       <h1 className='game-results-title'>{header}</h1>
       <h2 className='game-results-score'>{`${this.state.correct}/10 · ${percent}%`}</h2>
       <h3 className='game-results-quote'>{quote}</h3>
       {/* <button className='play-again-btn' 
         type='button'
         onClick={this.playAgain}>Dare to try again?</button> */}
-      <NavLink to='/' className='home-btn'>Back to the Great Hall</NavLink>
+      <NavLink to='/' className={`home-btn ${house}`}>Back to the Great Hall</NavLink>
     </div>
 
     return (
@@ -99,10 +100,11 @@ class Game extends Component {
   }
 }
 
-export const mapStateToProps = ({gameCharacters, isLoading, allCharacters}) => ({
+export const mapStateToProps = ({gameCharacters, isLoading, allCharacters, user}) => ({
   gameCharacters,
   isLoading,
-  allCharacters
+  allCharacters,
+  user
 })
 
 export const mapDispatchToProps = dispatch => ({
