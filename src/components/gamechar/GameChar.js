@@ -7,14 +7,16 @@ const GameChar = ({character, isLoading, checkAnswer, message, toggleModal, user
     return null;
   }
 
-  const popupMessage = <div className={`game-modal ${toggleModal}`}>
+  const house = user === undefined ? '' : user.house
+
+  const popupMessage = <div className={`game-modal ${toggleModal} ${house}`}>
         <h1 className='game-modal-h1'>{message}</h1>
       </div>
 
   return (
     <article className='game-char'>
         {popupMessage}
-        <h1 className='game-character-name'>{character.name}</h1>
+        <h1 className={`game-character-name ${house}`}>{character.name}</h1>
         <img className='game-crest' 
           name='Gryffindor' 
           src={require('../../images/gryffindor.png')} 
@@ -39,8 +41,8 @@ const GameChar = ({character, isLoading, checkAnswer, message, toggleModal, user
   )
 }
 
-export const mapStateToProps = ({ user }) => {
+export const mapStateToProps = ({ user }) => ({
   user
-}
+})
 
 export default connect(mapStateToProps)(GameChar);
