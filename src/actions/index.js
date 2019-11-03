@@ -17,3 +17,8 @@ export const setHouse = house => ({
   type: 'SET_HOUSE',
   house
 })
+
+export const setUser = user => ({
+  type: 'SET_USER',
+  user
+})
