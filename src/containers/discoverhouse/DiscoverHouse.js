@@ -25,14 +25,12 @@ export class DiscoverHouse extends Component {
 
   handleUser = () => {
     const { house, setUser } = this.props
-    console.log(house)
     const user = {
       name: this.state.name,
       wizardkind: this.state.wizardkind,
       wand: this.state.wand,
       house: house.toLowerCase()
     }
-    console.log(user)
     setUser(user)
     this.clearInputs();
   }
@@ -47,7 +45,6 @@ export class DiscoverHouse extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <section className='discover-house-section'>
         <PlayerInfo />
