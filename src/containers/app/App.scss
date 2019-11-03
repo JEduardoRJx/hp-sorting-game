@@ -36,5 +36,24 @@ main {
   color: $hw-light;
   text-align: center;
   border-bottom: 3px solid $hw-light;
-  
+  &.gryffindor {
+    background-color: $gryf-dark;
+    color: $gryf-light;
+    border-bottom: $gryf-light;
+  }
+  &.slytherin {
+    background-color: $sl-dark;
+    color: $sl-light;
+    border-bottom: $sl-light;
+  }
+  &.hufflepuff {
+    background-color: $huff-dark;
+    color: $huff-light;
+    border-bottom: $huff-light;
+  }
+  &.ravenclaw {
+    background-color: $rav-dark;
+    color: $rav-light;
+    border-bottom: $rav-light;
+  }
 }
