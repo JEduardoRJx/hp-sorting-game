@@ -44,27 +44,27 @@ class Game extends Component {
     this.setState({index: this.state.index + 1})
   }
 
-  playAgain = async () => {
-    console.log(this.props)
-    const { setCharacters, loading } = this.props;
-    try {
-      loading(true)
-      const characters =  await fetchCharacters();
-      setCharacters(characters)
-      loading(false)
-    } catch({ message }) {
-      console.log(message);
-    }
-    const { allCharacters } = this.props;
-    console.log(allCharacters)
-    setGameCharacters(allCharacters)
-    // this.setState =({
-    //   index: 0,
-    //   correct: 0, 
-    //   message: '',
-    //   toggleModal: 'hide',
-    // });
-  }
+  // playAgain = async () => {
+  //   console.log(this.props)
+  //   const { setCharacters, loading } = this.props;
+  //   try {
+  //     loading(true)
+  //     const characters =  await fetchCharacters();
+  //     setCharacters(characters)
+  //     loading(false)
+  //   } catch({ message }) {
+  //     console.log(message);
+  //   }
+  //   const { allCharacters } = this.props;
+  //   console.log(allCharacters)
+  //   setGameCharacters(allCharacters)
+  //   // this.setState =({
+  //   //   index: 0,
+  //   //   correct: 0, 
+  //   //   message: '',
+  //   //   toggleModal: 'hide',
+  //   // });
+  // }
 
   render() {
     const { gameCharacters, isLoading } = this.props;
