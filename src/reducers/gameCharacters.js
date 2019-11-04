@@ -1,7 +1,7 @@
 export const gameCharacters = (state = [], action) => {
   switch(action.type) {
     case 'SET_GAME_CHAR':
-      const charsInHouses = action.allCharacters.filter(char => 'house' in char)
+      const charsInHouses = action.allCharacters.filter(char => 'house' in char);
       let gameCharacters = [];
       const selectCharacter = () => {
         while (gameCharacters.length < 10) {
