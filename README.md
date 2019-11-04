@@ -1,8 +1,6 @@
 # Harry Potter and the Sorting Game
 
 ## Overview
-Movie Tracker is a web application that allows users to view the latest Holywood movies via the [The Movie DB API](https://www.themoviedb.org/documentation/api).
-
 Harry Potter and the Sorting Game is a web based application/game that allows Wizards and Witches to test their knowledge on characters and their respective houses! Additionally you will be able to view all characters in the wizarding world regardless if Hogwarts House status and view all known spells.
 
 ## Getting started
