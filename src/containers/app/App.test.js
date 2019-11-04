@@ -1,9 +1,60 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow } from 'enzyme';
+import { App, mapStateToProps, mapDispatchToProps } from './App'
+import { fetchCharacters } from '../../apiCalls'
+jest.mock('../../apiCalls');
 
-it.skip('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('AppContainer', () => {
+
+  describe('App component', () => {
+    let wrapper;
+    const mockSetCharacters = jest.fn();
+    const mockLoading = jest.fn();
+    const mockCharacters = [{
+      bloodStatus: "pure-blood",
+      deathEater: false,
+      dumbledoresArmy: false,
+      house: "Hufflepuff",
+      ministryOfMagic: false,
+      name: "Cedric Diggory",
+      orderOfThePhoenix: false,
+      role: "Student",
+      school: "Hogwarts School of Witchcraft, and Wizardry",
+      species: "human",
+      wand: 'Ash, 12 1/4", unicorn hair',
+      __v: 0,
+      _id: "5a1096253dc2080021cd875f"
+    }]
+    const mockIsLoading = true;
+    const mockUser = {
+      name: 'name',
+      wizardkind: 'wizard',
+      wand: 'wand',
+      house: 'slytherin'
+    }
+    fetchCharacters.mockImplementation(() => Promise.resolve(mockCharacters))
+
+    beforeEach(() => {
+      wrapper = shallow (<App 
+      setCharacters={mockSetCharacters}
+      loading={mockLoading}
+      allCharacters={mockCharacters}
+      isLoading={true}
+      user={mockUser}
+      />)
+    });
+
+    it('should match snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+
+  });
+
+  describe('mapStateToProps', () => {
+
+  });
+
+  describe('mapDispatchToProps', () => {
+    
+  })
+})
