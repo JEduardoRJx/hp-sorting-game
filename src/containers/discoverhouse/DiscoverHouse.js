@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './DiscoverHouse.scss';
 import PlayerInfo from '../../components/playerinfo/PlayerInfo';
 import { connect } from 'react-redux';
-import { setUser } from '../../actions'
+import { setUser } from '../../actions';
+import { NavLink } from 'react-router-dom';
 
 export class DiscoverHouse extends Component {
   constructor() {
@@ -23,6 +24,7 @@ export class DiscoverHouse extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
+
   handleUser = () => {
     const { house, setUser } = this.props
     const user = {
@@ -32,6 +34,10 @@ export class DiscoverHouse extends Component {
       house: house.toLowerCase()
     }
     setUser(user)
+    const form = document.querySelector('.house-form');
+    const modal = document.querySelector('.house-modal');
+    form.style.display = 'none';
+    modal.style.display = 'flex';
     this.clearInputs();
   }
 
@@ -47,8 +53,9 @@ export class DiscoverHouse extends Component {
   render() {
     const { user } = this.props;
     const house = user === undefined ? '' : user.house;
-    let yourHouseIsBtn;
-    
+    const houseHeader = house === undefined ? '' : house.toUpperCase()
+    let yourHouseIsBtn, houseModal;
+
     if(this.state.name !== '' && this.wizardKind !=='' && this.state.wand !== '') {
       yourHouseIsBtn = (
         <button className={`your-house-btn ${house}`} 
@@ -57,9 +64,17 @@ export class DiscoverHouse extends Component {
       )
     }
 
+    houseModal = (
+      <div className='house-modal'>
+        <h1 className={`house-h1 ${house}`}>{houseHeader}</h1>
+        <NavLink to='/' className={`house-home-btn ${house}`}>Back to the Great Hall</NavLink>
+      </div>
+    )
+
     return (
       <section className='discover-house-section'>
         <PlayerInfo />
+        {houseModal}
         <form className='house-form'>
           <input className='name-input' 
             type='text' 

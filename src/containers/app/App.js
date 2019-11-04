@@ -28,11 +28,9 @@ export class App extends Component {
 
   closeModal = () => {
     const modal = document.querySelector('.modal');
-    const modalTitle = document.querySelector('.modal-title');
-    const modalImg = document.querySelector('.modal-img');
+    const modalContents = document.querySelector('.modal-contents');
     const modalGif = document.querySelector('.modal-gif');
-    modalTitle.style.display = 'none';
-    modalImg.style.display = 'none';
+    modalContents.style.display = 'none';
     modalGif.style.display = 'block'
     setTimeout(function(){ 
       modal.style.display = 'none';
