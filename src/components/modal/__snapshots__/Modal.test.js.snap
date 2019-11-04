@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainScreen should match snapshot 1`] = `
+<div
+  className="modal"
+>
+  <div
+    className="modal-contents"
+  >
+    <h1
+      className="modal-title"
+    >
+      Harry Potter and the Sorting Game
+    </h1>
+    <h2
+      className="click-me"
+    >
+      Click Below to Begin
+    </h2>
+    <img
+      alt="marauders map logo"
+      className="modal-img"
+      onClick={[MockFunction]}
+      src="marauders_map.png"
+    />
+  </div>
+  <img
+    alt="I solemnly swear I am up to no good gif"
+    className="modal-gif"
+    src="issiautng.gif"
+  />
+</div>
+`;
