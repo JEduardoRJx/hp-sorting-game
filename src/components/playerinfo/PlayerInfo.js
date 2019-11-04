@@ -2,7 +2,7 @@ import React from 'react';
 import './PlayerInfo.scss'
 import { connect } from 'react-redux';
 
-const PlayerInfo = ({ user }) => {
+export const PlayerInfo = ({ user }) => {
   const houseCrest = user.house || 'hogwarts';
   const userName = user.name|| 'Discover your';
   const userWizardkind = user.wizardkind || 'House to ';
