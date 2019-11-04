@@ -48,6 +48,12 @@ describe('AppContainer', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
+    it('should setCharacters when fetchCharacters is called', () => {
+      expect(fetchCharacters).toHaveBeenCalled();
+      expect(mockSetCharacters).toHaveBeenCalledWith(mockCharacters);
+      expect(mockLoading).toHaveBeenCalledWith(false);
+    });
+
   });
 
   describe('mapStateToProps', () => {
