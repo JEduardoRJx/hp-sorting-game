@@ -33,7 +33,6 @@ $huff-light: #D1B738;
 
 .sorting-hat {
   grid-column: 1/3;
-  // border-bottom: 5px solid $hw-dark;
 }
 
 label {
@@ -43,29 +42,9 @@ label {
 }
 
 .sorting-hat,
-.characters,
-.instructions {
-  background-color: $hw-light;
-  color: $hw-dark;
-  &.gryffindor {
-    background-color: $gryf-light;
-    color: $gryf-dark;
-  }
-  &.slytherin {
-    background-color: $sl-light;
-    color: $sl-dark;
-  }
-  &.hufflepuff {
-    background-color: $huff-light;
-    color: $huff-dark;
-  }
-  &.ravenclaw {
-    background-color: $rav-light;
-    color: $rav-dark;
-  }
-}
-
 .golden-snitch,
+.instructions,
+.characters,
 .wand {
   color: $hw-light;
   &.gryffindor {
