@@ -37,10 +37,9 @@ describe ('GameChar', () => {
     });
 
     it.skip('should call the checkAnswer prop when an image is clicked on', () => {
-      wrapper.find('img').simulate('click');
-      expect(checkAnswer).toHaveBeenCalled();
+      wrapper.find('.game-crest').at(0).simulate('click')
+      expect(mockCheckAnswer).toHaveBeenCalled();
     })
-
   });
 
     describe('mapStateToProps', () => {
