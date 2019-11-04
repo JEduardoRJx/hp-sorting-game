@@ -40,7 +40,7 @@ describe('AppContainer', () => {
       setCharacters={mockSetCharacters}
       loading={mockLoading}
       allCharacters={mockCharacters}
-      isLoading={true}
+      isLoading={mockIsLoading}
       user={mockUser}
       />)
     });
