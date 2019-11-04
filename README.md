@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Harry Potter and the Sorting Game
 
-## Available Scripts
+## Overview
+Movie Tracker is a web application that allows users to view the latest Holywood movies via the [The Movie DB API](https://www.themoviedb.org/documentation/api).
 
-In the project directory, you can run:
+Harry Potter and the Sorting Game is a web based application/game that allows Wizards and Witches to test their knowledge on characters and their respective houses! Additionally you will be able to view all characters in the wizarding world regardless if Hogwarts House status and view all known spells.
 
-### `npm start`
+## Getting started
+* Clone down the repo and install the dependencies with `npm install`.
+* Run `npm start` and visit http://localhost:3000 to view the application in the browser.
+* Run the test suite with `npm test`.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Learning goals
+* Make informed design decisions to create a user-friendly application.
+* Become comfortable with different network requests like GET, POST, & DELETE.
+* Solidify concepts with React to create clean and re-useable components.
+* Become comfortable with Redux’s lifecycle, creating actions, reducers, and connecting them to React components.
+* Understand and solidify concepts with React component, asynchronous code, route handling, and Redux testing.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Built with
+  * [Harry Potter API](https://potterapi.com/)
+  * React (`create-react-app`)
+  * React Router
+  * Functional & Class React components
+  * Redux
+  * Testing Jest/Enzyme
+  * SASS
 
-### `npm test`
+## Images
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Inital Screen / Main Screen:
 
-### `npm run build`
+![HarryPotterSplash](https://user-images.githubusercontent.com/48504854/68165875-dab5e900-ff1d-11e9-9d62-eb4434b7b8a7.png)
+![HarryPotterMainPage](https://user-images.githubusercontent.com/48504854/68165872-da1d5280-ff1d-11e9-8d87-2a306b91fe7f.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### House Sorting Form / Sorted Page:
+![HarryPotterSortingForm](https://user-images.githubusercontent.com/48504854/68165874-dab5e900-ff1d-11e9-9ea8-8fa67887d4a5.png)
+![HarryPotterHouse](https://user-images.githubusercontent.com/48504854/68165870-da1d5280-ff1d-11e9-8e67-cec4eb6b6f55.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Play Game Page:
+![HarryPotterGamePage](https://user-images.githubusercontent.com/48504854/68165869-da1d5280-ff1d-11e9-8c81-b48fa315416a.png)
