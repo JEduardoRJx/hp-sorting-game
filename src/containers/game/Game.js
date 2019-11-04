@@ -68,7 +68,6 @@ export class Game extends Component {
 
   render() {
     const { gameCharacters, isLoading, user } = this.props;
-    console.log(gameCharacters)
     const percent = (this.state.correct / 10) * 100
     const quoteResult = quotes[quoteIndex[this.state.correct]]
     const header = quoteResult.header
