@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationsContainer Navigations Component should match snapshot 1`] = `
+<div
+  className="navigation"
+>
+  <div
+    className="icon-wrapper sorting-hat slytherin"
+  >
+    <NavLink
+      onClick={[Function]}
+      to="/discoveryourhouse"
+    >
+      <img
+        alt="sorting hat"
+        className="main-screen-img"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "sortingHat.svg",
+          }
+        }
+      />
+    </NavLink>
+    <label>
+      Discover Your House
+    </label>
+  </div>
+  <div
+    className="icon-wrapper golden-snitch slytherin"
+  >
+    <NavLink
+      onClick={[Function]}
+      to="/game"
+    >
+      <img
+        alt="golden snitch"
+        className="main-screen-img"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "snitch.svg",
+          }
+        }
+      />
+    </NavLink>
+    <label>
+      Play Game
+    </label>
+  </div>
+  <div
+    className="icon-wrapper instructions slytherin"
+  >
+    <NavLink
+      to="/instructions"
+    >
+      <img
+        alt="instructions"
+        className="main-screen-img"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "instructions.svg",
+          }
+        }
+      />
+    </NavLink>
+    <label>
+      Instructions
+    </label>
+  </div>
+  <div
+    className="icon-wrapper characters slytherin"
+  >
+    <NavLink
+      to="/characters"
+    >
+      <img
+        alt="characters"
+        className="main-screen-img"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "characters.svg",
+          }
+        }
+      />
+    </NavLink>
+    <label>
+      View All Characters
+    </label>
+  </div>
+  <div
+    className="icon-wrapper wand slytherin"
+  >
+    <NavLink
+      to="/spells"
+    >
+      <img
+        alt="wand view spells"
+        className="main-screen-img"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "wand.svg",
+          }
+        }
+      />
+    </NavLink>
+    <label>
+      View All Spells
+    </label>
+  </div>
+</div>
+`;

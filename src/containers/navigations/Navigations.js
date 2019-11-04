@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 import { setGameCharacters, setHouse, isLoading } from '../../actions';
 import { fetchSortingHat } from '../../apiCalls';
 
-class Navigations extends Component {
-
+export class Navigations extends Component {
 
   selectHouse = async () => {
     const { setHouse, loading } = this.props
@@ -71,12 +70,12 @@ class Navigations extends Component {
   }
 }
 
-const mapStateToProps = ({ allCharacters, user }) => ({
+export const mapStateToProps = ({ allCharacters, user }) => ({
   allCharacters,
   user
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setGameCharacters: characters => dispatch( setGameCharacters(characters) ),
   loading: bool => dispatch( isLoading(bool) ),
   setHouse: house => dispatch( setHouse(house) )
