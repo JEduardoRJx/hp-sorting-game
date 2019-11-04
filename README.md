@@ -8,6 +8,9 @@ Harry Potter and the Sorting Game is a web based application/game that allows Wi
 * Run `npm start` and visit http://localhost:3000 to view the application in the browser.
 * Run the test suite with `npm test`.
 
+## OR to Play
+* If you can't wait to test knowledge visit [HP-Sorting-Game](https://hp-sorting-game.herokuapp.com/)
+
 ## Learning goals
 * Create a user-friendly application.
 * Become comfortable with Redux’s lifecycle, creating actions, reducers, and connecting them to React components.
