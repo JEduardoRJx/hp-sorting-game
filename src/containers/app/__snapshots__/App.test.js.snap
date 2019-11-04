@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer App component should match snapshot 1`] = `
+<main
+  className="slytherin"
+>
+  <h1
+    className="game-title slytherin"
+  >
+    Harry Potter and the Sorting Game
+  </h1>
+  <Redirect
+    to="/"
+  />
+  <Modal
+    closeModal={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/"
+    render={[Function]}
+  />
+  <Route
+    path="/game"
+    render={[Function]}
+  />
+  <Route
+    path="/discoveryourhouse"
+    render={[Function]}
+  />
+</main>
+`;

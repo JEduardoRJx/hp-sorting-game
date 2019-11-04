@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerInfo should match snapshot 1`] = `
+<aside
+  className="slytherin"
+>
+  <img
+    alt="hogwarts crest"
+    className="crest"
+    src="slytherin.png"
+  />
+  <h1
+    className="user-name"
+  >
+    name
+  </h1>
+  <h2
+    className="user-wizardkind"
+  >
+    wizard
+  </h2>
+  <h2
+    className="user-wand"
+  >
+    wand
+  </h2>
+</aside>
+`;

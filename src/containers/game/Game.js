@@ -8,7 +8,7 @@ import { quoteIndex, quotes } from './quotes';
 // import { fetchCharacters } from '../../apiCalls';
 import { setCharacters, isLoading, setGameCharacters } from '../../actions';
 
-class Game extends Component {
+export class Game extends Component {
   constructor() {
     super();
     this.state ={
@@ -68,7 +68,6 @@ class Game extends Component {
 
   render() {
     const { gameCharacters, isLoading, user } = this.props;
-    console.log(gameCharacters)
     const percent = (this.state.correct / 10) * 100
     const quoteResult = quotes[quoteIndex[this.state.correct]]
     const header = quoteResult.header

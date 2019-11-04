@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameContainer Game component should match snapshot 1`] = `
+<section
+  className="game-section"
+>
+  <Connect(PlayerInfo) />
+  <Connect(GameChar)
+    character={
+      Object {
+        "__v": 0,
+        "_id": "5a1096253dc2080021cd875f",
+        "bloodStatus": "pure-blood",
+        "deathEater": false,
+        "dumbledoresArmy": false,
+        "house": "Hufflepuff",
+        "ministryOfMagic": false,
+        "name": "Cedric Diggory",
+        "orderOfThePhoenix": false,
+        "role": "Student",
+        "school": "Hogwarts School of Witchcraft, and Wizardry",
+        "species": "human",
+        "wand": "Ash, 12 1/4\\", unicorn hair",
+      }
+    }
+    checkAnswer={[Function]}
+    isLoading={true}
+    message=""
+    toggleModal="hide"
+  />
+</section>
+`;

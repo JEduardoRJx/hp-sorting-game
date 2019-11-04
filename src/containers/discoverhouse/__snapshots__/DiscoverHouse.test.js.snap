@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DiscoverHouseContainer DiscoverHouse component should match snapshot 1`] = `
+<section
+  className="discover-house-section"
+>
+  <Connect(PlayerInfo) />
+  <div
+    className="house-modal"
+  >
+    <h1
+      className="house-h1 slytherin"
+    >
+      SLYTHERIN
+    </h1>
+    <NavLink
+      className="house-home-btn slytherin"
+      to="/"
+    >
+      Back to the Great Hall
+    </NavLink>
+  </div>
+  <form
+    className="house-form"
+  >
+    <input
+      className="name-input"
+      onChange={[Function]}
+      placeholder="Enter Name"
+      type="text"
+    />
+    <h2
+      className="house-label slytherin"
+    >
+      Witch or Wizard
+    </h2>
+    <div
+      className="witchwizard-btn-wrapper"
+    >
+      <button
+        className="witchwizard-btn slytherin"
+        name="wizardkind"
+        onClick={[Function]}
+        type="button"
+        value="Witch"
+      >
+        Witch
+      </button>
+      <button
+        className="witchwizard-btn slytherin"
+        name="wizardkind"
+        onClick={[Function]}
+        type="button"
+        value="Wizard"
+      >
+        Wizard
+      </button>
+    </div>
+    <h2
+      className="house-label slytherin"
+    >
+      Select your Wand
+    </h2>
+    <div
+      className="wand-btn-wrapper"
+    >
+      <button
+        className="wand-btn slytherin"
+        name="wand"
+        onClick={[Function]}
+        type="button"
+        value="Elder, 15\\", thestral tail hair"
+      >
+        Elder, 15", thestral tail hair
+      </button>
+      <button
+        className="wand-btn slytherin"
+        name="wand"
+        onClick={[Function]}
+        type="button"
+        value="Holly, 11\\", phoenix feather"
+      >
+        Holly, 11", phoenix feather
+      </button>
+      <button
+        className="wand-btn slytherin"
+        name="wand"
+        onClick={[Function]}
+        type="button"
+        value="Vine wood, 10 3/4\\", dragon heartstring"
+      >
+        Vine wood, 10 3/4", dragon heartstring
+      </button>
+      <button
+        className="wand-btn slytherin"
+        name="wand"
+        onClick={[Function]}
+        type="button"
+        value="Fir, 9 1/2\\", dragon heartstring"
+      >
+        Fir, 9 1/2", dragon heartstring
+      </button>
+    </div>
+  </form>
+</section>
+`;
