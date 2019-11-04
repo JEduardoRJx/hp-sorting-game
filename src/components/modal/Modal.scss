@@ -15,6 +15,11 @@ $hw-light: #D3A481;
   align-items: center;
 }
 
+.modal-contents {
+  width: 100%;
+  text-align: center;
+}
+
 .modal-title {
   font-family: 'harry_pregular';
   font-size: 6em;
@@ -23,6 +28,7 @@ $hw-light: #D3A481;
 
 .modal-img {
   height: 300px;
+  margin-top: 30px;
   &:hover {
     transform: scale(1.2);
     cursor: pointer;

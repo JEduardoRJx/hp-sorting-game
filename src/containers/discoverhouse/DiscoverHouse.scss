@@ -1,0 +1,219 @@
+$hw-dark: #4c3638;
+$hw-light: #D3A481;
+$sl-dark: #276F45;
+$sl-light: #A8B0BF;
+$gryf-dark: #702737;
+$gryf-light: #DAA520;
+$rav-dark: #274F70;
+$rav-light: #C98C4E;
+$huff-dark: #141414;
+$huff-light: #D1B738;
+
+.discover-house-section {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.house-form {
+  grid-column: 2/4;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name-input {
+  height: 30px;
+  width: 400px;
+  font-size: 2em;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.house-label {
+  font-size: 2em;
+  color: $hw-light;
+  &.gryffindor {
+    color: $gryf-light;
+  }
+  &.slytherin {
+    color: $sl-light;
+  }
+  &.hufflepuff {
+    color: $huff-light;
+  }
+  &.ravenclaw {
+    color: $rav-light;
+  }
+}
+
+.witchwizard-btn-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.witchwizard-btn {
+  width: 200px;
+  font-size: 2em;
+}
+
+.wand-btn-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.wand-btn {
+  width: 350px;
+  height: 60px;
+  font-size: 1.5em;
+}
+
+.your-house-btn {
+  width: 50%;
+  font-size: 2.5em;
+}
+
+.witchwizard-btn,
+.wand-btn,
+.your-house-btn {
+  border-radius: 30px;
+  border: none;
+  color: $hw-light;
+  background-color: $hw-dark;
+  border: 3px solid $hw-light;
+  outline: none;
+  &:hover {
+    color: $hw-dark;
+    background-color: $hw-light;
+    border: 3px solid $hw-dark;
+  }
+  &.gryffindor {
+    color: $gryf-light;
+    background-color: $gryf-dark;
+    border: 3px solid $gryf-light;
+    &:hover {
+      color: $gryf-dark;
+      background-color: $gryf-light;
+      border: 3px solid $gryf-dark;
+    }
+  }
+  &.slytherin {
+    color: $sl-light;
+    background-color: $sl-dark;
+    border: 3px solid $sl-light;
+    &:hover {
+      color: $sl-dark;
+      background-color: $sl-light;
+      border: 3px solid $sl-dark;
+    }
+  }
+  &.hufflepuff {
+    color: $huff-light;
+    background-color: $huff-dark;
+    border: 3px solid $huff-light;
+    &:hover {
+      color: $huff-dark;
+      background-color: $huff-light;
+      border: 3px solid $huff-dark;
+    }
+  }
+  &.ravenclaw {
+    color: $rav-light;
+    background-color: $rav-dark;
+    border: 3px solid $rav-light;
+    &:hover {
+      color: $rav-dark;
+      background-color: $rav-light;
+      border: 3px solid $rav-dark;
+    }
+  }
+}
+
+.house-modal {
+  display: none;
+  grid-column: 2/4;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.house-home-btn  {
+  font-size: 2em;
+  width: 50%;
+  text-decoration: none;
+  background-color: $hw-dark;
+  color: $hw-light;
+  border-radius: 3px;
+  padding: 5px;
+  border: 3px solid $hw-light;
+  &:hover {
+    background-color: $hw-light;
+    color: $hw-dark;
+  }
+  &.gryffindor {
+    background-color: $gryf-dark;
+    color: $gryf-light;
+    border: 3px solid $gryf-light;
+    &:hover {
+      background-color: $gryf-light;
+      color: $gryf-dark;
+    }
+  }
+  &.slytherin {
+    background-color: $sl-dark;
+    color: $sl-light;
+    border: 3px solid $sl-light;
+    &:hover {
+      background-color: $sl-light;
+      color: $sl-dark;
+    }
+  }
+  &.hufflepuff {
+    background-color: $huff-dark;
+    color: $huff-light;
+    border: 3px solid $huff-light;
+    &:hover {
+      background-color: $huff-light;
+      color: $huff-dark;
+    }
+  }
+  &.ravenclaw {
+    background-color: $rav-dark;
+    color: $rav-light;
+    border: 3px solid $rav-light;
+    &:hover {
+      background-color: $rav-light;
+      color: $rav-dark;
+    }
+  }
+}
+
+.house-h1 {
+  font-size: 10em;
+  font-family: harry_pregular;
+  &.gryffindor {
+    color: $gryf-light;
+  }
+  &.slytherin {
+    color: $sl-light;
+  }
+  &.hufflepuff {
+    color: $huff-light;
+  }
+  &.ravenclaw {
+    color: $rav-light;
+  }
+}

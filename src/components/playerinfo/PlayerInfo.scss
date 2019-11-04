@@ -1,14 +1,58 @@
 $hw-dark: #4c3638;
 $hw-light: #D3A481;
+$sl-dark: #276F45;
+$sl-light: #A8B0BF;
+$gryf-dark: #702737;
+$gryf-light: #DAA520;
+$rav-dark: #274F70;
+$rav-light: #C98C4E;
+$huff-dark: #141414;
+$huff-light: #D1B738;
 
 aside {
   width: 100%;
-  border-right: 3px solid $hw-light;
+  background-color: $hw-light;
+  color: $hw-dark;
+  border-right: 10px solid $hw-dark;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  &.gryffindor {
+    background-color: $gryf-light;
+    color: $gryf-dark;
+  border-right: 10px solid $gryf-dark;
+
+  }
+  &.slytherin {
+    background-color: $sl-light;
+    color: $sl-dark;
+  border-right: 10px solid $sl-dark;
+
+  }
+  &.hufflepuff {
+    background-color: $huff-light;
+    color: $huff-dark;
+    border-right: 10px solid $huff-dark;
+  }
+  &.ravenclaw {
+    background-color: $rav-light;
+    color: $rav-dark;
+    border-right: 10px solid $rav-dark;
+  }
 }
 
 .crest {
   height: 350px;
+}
+
+.user-name {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.user-wizardkind,
+.user-wand {
+  font-size: 1.75em;
+  text-align: center;
 }

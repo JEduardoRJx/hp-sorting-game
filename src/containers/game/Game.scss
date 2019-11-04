@@ -16,14 +16,30 @@ $huff-light: #D1B738;
 }
 
 .game-results {
-  background-color: $hw-light;
+  background-color: $hw-dark;
   grid-column: 2/4;
   padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  color: $hw-dark;
+  color: $hw-light;
+  &.gryffindor {
+    background-color: $gryf-dark;
+    color: $gryf-light;
+  }
+  &.slytherin {
+    background-color: $sl-dark;
+    color: $sl-light;
+  }
+  &.hufflepuff {
+    background-color: $huff-dark;
+    color: $huff-light;
+  }
+  &.ravenclaw {
+    background-color: $rav-dark;
+    color: $rav-light;
+  }
 }
 
 .game-results-title {
@@ -41,13 +57,49 @@ $huff-light: #D1B738;
 .home-btn {
   font-size: 2em;
   text-decoration: none;
-  background-color: $hw-light;
-  color: $hw-dark;
+  background-color: $hw-dark;
+  color: $hw-light;
   border-radius: 3px;
   padding: 5px;
-  border: 3px solid $hw-dark;
+  border: 3px solid $hw-light;
   &:hover {
-    background-color: $hw-dark;
-    color: $hw-light;
+    background-color: $hw-light;
+    color: $hw-dark;
+  }
+  &.gryffindor {
+    background-color: $gryf-dark;
+    color: $gryf-light;
+    border: 3px solid $gryf-light;
+    &:hover {
+      background-color: $gryf-light;
+      color: $gryf-dark;
+    }
+  }
+  &.slytherin {
+    background-color: $sl-dark;
+    color: $sl-light;
+    border: 3px solid $sl-light;
+    &:hover {
+      background-color: $sl-light;
+      color: $sl-dark;
+    }
+  }
+  &.hufflepuff {
+    background-color: $huff-dark;
+    color: $huff-light;
+    border: 3px solid $huff-light;
+    &:hover {
+      background-color: $huff-light;
+      color: $huff-dark;
+    }
+  }
+  &.ravenclaw {
+    background-color: $rav-dark;
+    color: $rav-light;
+    border: 3px solid $rav-light;
+    &:hover {
+      background-color: $rav-light;
+      color: $rav-dark;
+    }
   }
 }

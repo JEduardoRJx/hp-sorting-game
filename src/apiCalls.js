@@ -1,5 +1,4 @@
 const baseUrl = 'https://www.potterapi.com/v1';
-const sortingHat = '/sortingHat';
 
 const apiKey = `?key=$2a$10$soGCoAQkdenPDKuyeTco3urLugvc4a/RMC2S3tzviQxAbVxmHAPN6`
 
@@ -13,4 +12,14 @@ export const fetchCharacters = async () => {
   }
   const characters = await response.json();
   return characters;
+}
+
+export const fetchSortingHat = async () => {
+  const url = `${baseUrl}/sortingHat`;
+  const response = await fetch(url);
+  if(!response.ok) {
+    throw Error('The sorting hat must me asleep, can\'t fetch House');
+  }
+  const house = await response.json();
+  return house;
 }

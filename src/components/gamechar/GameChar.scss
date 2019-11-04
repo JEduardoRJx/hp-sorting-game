@@ -30,12 +30,25 @@ $huff-light: #D1B738;
   font-size: 3em;
   grid-column: 1/3;
   color: $hw-light;
-    // background-color: $hw-light;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.gryffindor {
+    color: $gryf-light;
+  }
+  &.slytherin {
+    color: $sl-light;
+
+  }
+  &.hufflepuff {
+    color: $huff-light;
+
+  }
+  &.ravenclaw {
+    color: $rav-light;
+  }
 }
 
 .game-modal {
@@ -49,8 +62,25 @@ $huff-light: #D1B738;
   height: 150px;
   width: 55%;
   margin: 1% 0 0% 5%;
-  // border: solid 5px $hw-light;
   border-radius: 25px;
+  &.gryffindor {
+    background-color: $gryf-light;
+    color: $gryf-dark;
+  }
+  &.slytherin {
+    background-color: $sl-light;
+    color: $sl-dark;
+
+  }
+  &.hufflepuff {
+    background-color: $huff-light;
+    color: $huff-dark;
+
+  }
+  &.ravenclaw {
+    background-color: $rav-light;
+    color: $rav-dark;
+  }
 }
 
 .hide {
