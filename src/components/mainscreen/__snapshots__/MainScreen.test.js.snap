@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainScreen should match snapshot 1`] = `
+<section
+  className="main-screen"
+>
+  <Connect(PlayerInfo) />
+  <Connect(Navigations) />
+</section>
+`;
