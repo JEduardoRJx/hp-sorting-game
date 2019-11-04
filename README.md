@@ -9,11 +9,10 @@ Harry Potter and the Sorting Game is a web based application/game that allows Wi
 * Run the test suite with `npm test`.
 
 ## Learning goals
-* Make informed design decisions to create a user-friendly application.
-* Become comfortable with different network requests like GET, POST, & DELETE.
-* Solidify concepts with React to create clean and re-useable components.
+* Create a user-friendly application.
 * Become comfortable with Redux’s lifecycle, creating actions, reducers, and connecting them to React components.
-* Understand and solidify concepts with React component, asynchronous code, route handling, and Redux testing.
+* Solidify concepts with React components, asynchronous code, route handling, and Redux testing.
+* Plan a web based application based on an API of my choosing.
 
 ## Built with
   * [Harry Potter API](https://potterapi.com/)
