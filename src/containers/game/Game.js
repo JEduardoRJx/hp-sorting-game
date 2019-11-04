@@ -8,7 +8,7 @@ import { quoteIndex, quotes } from './quotes';
 // import { fetchCharacters } from '../../apiCalls';
 import { setCharacters, isLoading, setGameCharacters } from '../../actions';
 
-class Game extends Component {
+export class Game extends Component {
   constructor() {
     super();
     this.state ={

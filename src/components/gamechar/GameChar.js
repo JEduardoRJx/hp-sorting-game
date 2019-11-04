@@ -2,7 +2,7 @@ import React from 'react';
 import './GameChar.scss'
 import { connect } from 'react-redux'
 
-const GameChar = ({character, isLoading, checkAnswer, message, toggleModal, user}) => {
+export const GameChar = ({character, isLoading, checkAnswer, message, toggleModal, user}) => {
   if(isLoading) {
     return null;
   }
