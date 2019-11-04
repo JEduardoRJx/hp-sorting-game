@@ -51,14 +51,85 @@ describe('DiscoverHouseContainer', () => {
       expect(wrapper.state('wand')).toEqual(expected);
     });
 
-    
+    it.skip('should create a new user when handleUser is called', () => {
+      const mockUser = {
+        name: 'name',
+        wizardkind: 'wizard',
+        wand: 'magical wand',
+        house: 'slytherin'
+      }
+      wrapper.instance().handleUser();
+      expect(mockSetUser).toHaveBeenCalledWith(mockUser)
+    });
+
+    it('should update state when clearInputs is called', () => {
+      const mockstate = {
+        name: 'name',
+        wizardkind: 'wizard',
+        wand: 'wand',
+        house: 'slythering'
+      }
+      const expected = ''
+      wrapper.instance().clearInputs()
+      expect(wrapper.state('name')).toEqual(expected);
+    });
+
+
   });
 
   describe('mapStateToProps', () => {
 
+    it('should return a user', () => {
+      const mockState = {
+        filter: 'SET_HOUSE',
+        user: {
+          name: 'name',
+          wizardkind: 'wizard',
+          wand: 'wand',
+          house: 'slytherin'
+        }
+      }
+      const expected = {
+        user: {
+          name: 'name',
+          wizardkind: 'wizard',
+          wand: 'wand',
+          house: 'slytherin'
+        }
+      }
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected)
+    });
+
+    it('should return a house', () => {
+      const mockState = {
+        filter: 'SET_HOUSE',
+        house: 'slytherin'
+      }
+      const expected = {
+        house: 'slytherin'
+      }
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expected);
+    })
+
   });
 
   describe('mapDispatchToProps', () => {
-    
+    it('calls setUser with a user object', () => {
+      const mockDispatch = jest.fn();
+      const user = {
+        name: 'name',
+        wand: 'wand',
+        wizardkind: 'wizardkind',
+        house: 'slythering'
+      }
+      const actionToDispatch = setUser(user);
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.setUser(user);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
   })
 })
