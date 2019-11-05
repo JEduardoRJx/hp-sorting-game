@@ -76,6 +76,9 @@ export class DiscoverHouse extends Component {
         <PlayerInfo />
         {houseModal}
         <form className='house-form'>
+        <h1 className={`howtoplay-h1 ${house}`}>Sorting Hat</h1>
+
+        <p className={`${house}`}>Enter your name, select Witch or Wizard, and finally choose your wand!</p>
           <input className='name-input' 
             type='text' 
             placeholder='Enter Name' 

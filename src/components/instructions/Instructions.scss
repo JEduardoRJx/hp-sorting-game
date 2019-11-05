@@ -49,6 +49,8 @@ $huff-light: #D1B738;
 .howtoplay-h1 {
   font-size: 2.5em;
   width: 60%;
+  text-align: center;
+  color: $hw-light;
   border-bottom: 5px solid $hw-light;
   &.gryffindor {
     border-bottom: 5px solid $gryf-light;
