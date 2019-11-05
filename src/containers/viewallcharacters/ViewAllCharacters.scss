@@ -1,0 +1,32 @@
+$hw-dark: #4c3638;
+$hw-light: #D3A481;
+$sl-dark: #276F45;
+$sl-light: #A8B0BF;
+$gryf-dark: #702737;
+$gryf-light: #DAA520;
+$rav-dark: #274F70;
+$rav-light: #C98C4E;
+$huff-dark: #141414;
+$huff-light: #D1B738;
+
+.viewallcharacters-section {
+  height: 90vh;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.characters-content {
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $hw-light;
+}
+
+.coming-soon {
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: white;
+}

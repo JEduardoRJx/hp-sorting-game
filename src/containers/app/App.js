@@ -8,7 +8,10 @@ import MainScreen from '../../components/mainscreen/MainScreen';
 import { setCharacters, isLoading } from '../../actions';
 import Game from '../game/Game';
 import DiscoverHouse from '../discoverhouse/DiscoverHouse';
-import Instructions from '../../components/instructions/Instructions'
+import Instructions from '../../components/instructions/Instructions';
+import ViewAllCharacters from '../viewallcharacters/ViewAllCharacters';
+import ViewAllSpells from '../viewallspells/ViewAllSpells';
+
 
 export class App extends Component {
   constructor() {
@@ -50,6 +53,8 @@ export class App extends Component {
         <Route path='/game' render={() => <Game />} />
         <Route path='/discoveryourhouse' render={() => <DiscoverHouse />} />
         <Route path='/instructions' render={() => <Instructions />} />
+        <Route path='/characters' render={() => <ViewAllCharacters />} />
+        <Route path='/spells' render={() => <ViewAllSpells />} />
       </main>
     )
   }
