@@ -30,15 +30,38 @@ $huff-light: #D1B738;
 .screenshot1 {
   max-width: 50%;
   height: auto;
-  border-radius: 10px;
-  border: 10px solid $hw-light;
+  border-radius: 5px;
+  border: 5px solid $hw-light;
+  &.gryffindor {
+    border: 5px solid $gryf-light;
+  }
+  &.slytherin {
+    border: 5px solid $sl-light;
+  }
+  &.hufflepuff {
+    border: 5px solid $huff-light;
+  }
+  &.ravenclaw {
+    border: 5px solid $rav-light;
+  }
 }
 
 .howtoplay-h1 {
   font-size: 2.5em;
-  // background-color: blue;
   width: 60%;
   border-bottom: 5px solid $hw-light;
+  &.gryffindor {
+    border-bottom: 5px solid $gryf-light;
+  }
+  &.slytherin {
+    border-bottom: 5px solid $sl-light;
+  }
+  &.hufflepuff {
+    border-bottom: 5px solid $huff-light;
+  }
+  &.ravenclaw {
+    border-bottom: 5px solid $rav-light;
+  }
 }
 
 .howtoplay-h2 {
@@ -47,4 +70,23 @@ $huff-light: #D1B738;
 
 p {
   font-size: 1.5em;
+  grid-column: 1/3;
+  color: $hw-light;
+}
+
+.howtoplay-h1,
+.howtoplay-h2,
+p {
+  &.gryffindor {
+    color: $gryf-light;
+  }
+  &.slytherin {
+    color: $sl-light;
+  }
+  &.hufflepuff {
+    color: $huff-light;
+  }
+  &.ravenclaw {
+    color: $rav-light;
+  }
 }
