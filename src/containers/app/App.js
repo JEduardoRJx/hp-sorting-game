@@ -7,7 +7,8 @@ import Modal from '../../components/modal/Modal';
 import MainScreen from '../../components/mainscreen/MainScreen';
 import { setCharacters, isLoading } from '../../actions';
 import Game from '../game/Game';
-import DiscoverHouse from '../discoverhouse/DiscoverHouse'
+import DiscoverHouse from '../discoverhouse/DiscoverHouse';
+import Instructions from '../../components/instructions/Instructions'
 
 export class App extends Component {
   constructor() {
@@ -48,6 +49,7 @@ export class App extends Component {
         <Route exact path='/' render={() => <MainScreen />} />
         <Route path='/game' render={() => <Game />} />
         <Route path='/discoveryourhouse' render={() => <DiscoverHouse />} />
+        <Route path='/instructions' render={() => <Instructions />} />
       </main>
     )
   }
