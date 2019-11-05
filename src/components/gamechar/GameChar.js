@@ -15,6 +15,7 @@ export const GameChar = ({character, isLoading, checkAnswer, message, toggleModa
 
   return (
     <article className='game-char'>
+      <p className={`${house}`}>Match each character to his or her house</p>
         {popupMessage}
         <h1 className={`game-character-name ${house}`}>{character.name}</h1>
         <img className='game-crest' 
