@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/hp-sorting-game/static/css/main.126e1bd1.chunk.css",
+    "main.js": "/hp-sorting-game/static/js/main.2756ed29.chunk.js",
+    "main.js.map": "/hp-sorting-game/static/js/main.2756ed29.chunk.js.map",
+    "runtime-main.js": "/hp-sorting-game/static/js/runtime-main.085954b4.js",
+    "runtime-main.js.map": "/hp-sorting-game/static/js/runtime-main.085954b4.js.map",
+    "static/js/2.67472319.chunk.js": "/hp-sorting-game/static/js/2.67472319.chunk.js",
+    "static/js/2.67472319.chunk.js.map": "/hp-sorting-game/static/js/2.67472319.chunk.js.map",
+    "index.html": "/hp-sorting-game/index.html",
+    "precache-manifest.2f68442801400d4c71331ace76b3d5e9.js": "/hp-sorting-game/precache-manifest.2f68442801400d4c71331ace76b3d5e9.js",
+    "service-worker.js": "/hp-sorting-game/service-worker.js",
+    "static/css/main.126e1bd1.chunk.css.map": "/hp-sorting-game/static/css/main.126e1bd1.chunk.css.map",
+    "static/media/characters.svg": "/hp-sorting-game/static/media/characters.d1bc94dd.svg",
+    "static/media/characters.png": "/hp-sorting-game/static/media/characters.fcd64cd0.png",
+    "static/media/gryffindor.png": "/hp-sorting-game/static/media/gryffindor.d1e853a5.png",
+    "static/media/App.scss": "/hp-sorting-game/static/media/harryp__-webfont.5b96c469.woff2",
+    "static/media/hogwarts.png": "/hp-sorting-game/static/media/hogwarts.f0c519e3.png",
+    "static/media/hufflepuff.png": "/hp-sorting-game/static/media/hufflepuff.794d7eff.png",
+    "static/media/instructions.png": "/hp-sorting-game/static/media/instructions.075c9df6.png",
+    "static/media/instructions.svg": "/hp-sorting-game/static/media/instructions.cac93e90.svg",
+    "static/media/issiautng.gif": "/hp-sorting-game/static/media/issiautng.1fd5bafd.gif",
+    "static/media/marauders_map.png": "/hp-sorting-game/static/media/marauders_map.6c0dd9ec.png",
+    "static/media/ravenclaw.png": "/hp-sorting-game/static/media/ravenclaw.df901d44.png",
+    "static/media/screenshot1.png": "/hp-sorting-game/static/media/screenshot1.c699b1dc.png",
+    "static/media/slytherin.png": "/hp-sorting-game/static/media/slytherin.5c66c97a.png",
+    "static/media/snitch.png": "/hp-sorting-game/static/media/snitch.09fe0cd2.png",
+    "static/media/snitch.svg": "/hp-sorting-game/static/media/snitch.e84353d7.svg",
+    "static/media/sortingHat.svg": "/hp-sorting-game/static/media/sortingHat.d5874cf5.svg",
+    "static/media/sortinghat.png": "/hp-sorting-game/static/media/sortinghat.22a80f33.png",
+    "static/media/wand.svg": "/hp-sorting-game/static/media/wand.05ff2bef.svg",
+    "static/media/wand.png": "/hp-sorting-game/static/media/wand.db7509f6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.085954b4.js",
+    "static/js/2.67472319.chunk.js",
+    "static/css/main.126e1bd1.chunk.css",
+    "static/js/main.2756ed29.chunk.js"
+  ]
+}
